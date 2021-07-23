@@ -10,6 +10,7 @@
 console.log(data);
 
 // 1.0 Create the bridge using <ul class="cards"></ul>
+const cards = document.querySelector(".cards");
 
 // 2.0 renderPokemonCard(pokemon)
 // - create an <h2>
@@ -28,6 +29,18 @@ console.log(data);
 // input: an array of stats from a pokemon object
 // output: <ul> element with various <li> elements
 
+function statsFinder(stats) {
+    const cardStats = document.createElement();
+    
+  
+    for (let i = 0; i < stats.length; i++) {
+      const statName = stats[i].stat.name;
+
+    }
+    // return cardStats;
+  }
+  
+
 // 2.2 renderPokemonCards(data)
 // - A for loop on the array of pokemon
 // - run renderPokemon()
@@ -38,10 +51,20 @@ console.log(data);
 
 
 // 2.2 renderPokemonCards(data)
-function renderPokemonCards (data)
-const 
+function renderPokemonCards(data) {
+    for (let i = 0; i < data.length; i++) {
+   
+        const listOfPokemon = data[i];
+    
+    cardsElem.append(createPokemonCard(listOfPokemon));
+
+}
+  
+}
+  renderPokemonCards(data);
 // - A for loop on the array of pokemon
 // - run renderPokemon()
 // - append to the element from Step 1.0
 // - input: an array of objects that represent pokemon (data)
 // - output: -
+
